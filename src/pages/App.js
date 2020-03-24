@@ -13,6 +13,7 @@ import './App.css';
 
 import Restriction from './Restriction';
 import Login from './Login';
+import Overview from './Overview';
 
 const { Header, Content, Footer } = Layout;
 
@@ -35,6 +36,7 @@ class App extends React.Component {
                         <Breadcrumb style={{ margin: '16px 0' }}>
                             <Breadcrumb.Item>Start</Breadcrumb.Item>
                             <Breadcrumb.Item>Datenpflege</Breadcrumb.Item>
+                            <Breadcrumb.Item>Übersicht</Breadcrumb.Item>
                         </Breadcrumb>
                         <div className="site-layout-content">
 
@@ -42,6 +44,7 @@ class App extends React.Component {
                                 <Switch>
                                     <Route path="/government" component={Restriction}/>
                                     <Route exact path="/" component={Login}/>
+                                    <Route exact path="/overview" component={Overview}/>
                                 </Switch>
                             </Router>
                         </div>

@@ -95,8 +95,8 @@ class Login extends React.Component {
           </Form.Item>
 
           <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
-              Submit
+            <Button type="primary" htmlType="submit" onClick = {console.log('First test')}>
+              Submit_1
             </Button>
           </Form.Item>
         </Form>

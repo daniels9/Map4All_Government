@@ -96,16 +96,17 @@ class Restriction extends React.Component {
     var startDateMoment = Moment(values.startDate);
     var endDateMoment = Moment(values.endDate);
     if (startDateMoment.isAfter(endDateMoment)) {
-      alert("Start has to be bevore end");
+      alert("Start has to be before end");
       return
     }
 
-    /*
-    fetch('/api/form-submit-url', {
-      method: 'POST',
-      body: values,
+    
+    fetch('https://map4all.appspot.com/regulation-class/', {
+      method: 'GET',
+      'headers': {
+        'Authorization': 'Basic YWRtaW46WHpGcnhNcTdtR0VoRUhZMjd3cFQzSG1JZ2F4WXpZaVoycXAyUnhrVmZBazM4dHR5OXBJUVc2MXEwTmM2ZEQwUA=='
+      }
     });
-*/
 
   }
 
@@ -171,7 +172,7 @@ class Restriction extends React.Component {
           </Form.Item>
 
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" onClick={console.log("Test 2")}>
               Submit
             </Button>
           </Form.Item>
